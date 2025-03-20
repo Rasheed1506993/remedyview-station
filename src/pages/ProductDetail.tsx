@@ -11,7 +11,7 @@ import {
   TabsList, 
   TabsTrigger 
 } from '@/components/ui/tabs';
-import { ChevronLeft, ShoppingCart, ShieldCheck, PrescriptionBottle, AlertTriangle } from 'lucide-react';
+import { ChevronLeft, ShoppingCart, ShieldCheck, Pill, AlertTriangle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
@@ -131,7 +131,7 @@ const ProductDetail: React.FC = () => {
                 <span className="text-2xl font-bold text-pharmacy-600">${product.price.toFixed(2)}</span>
                 {product.requiresPrescription && (
                   <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium inline-flex items-center">
-                    <PrescriptionBottle className="h-3 w-3 mr-1" />
+                    <Pill className="h-3 w-3 mr-1" />
                     {t('product.requiresPrescription')}
                   </div>
                 )}
@@ -169,7 +169,7 @@ const ProductDetail: React.FC = () => {
                     {product.requiresPrescription && (
                       <Button variant="outline" asChild className="btn-hover">
                         <Link to="/prescription">
-                          <PrescriptionBottle className="h-5 w-5 mr-2" />
+                          <Pill className="h-5 w-5 mr-2" />
                           Upload Prescription
                         </Link>
                       </Button>

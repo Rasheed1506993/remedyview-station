@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
-import { PrescriptionBottle, UserRound, Truck } from 'lucide-react';
+import { Pill, UserRound, Truck } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Services: React.FC = () => {
@@ -33,7 +33,7 @@ const Services: React.FC = () => {
 
   const services = [
     {
-      icon: <PrescriptionBottle className="h-8 w-8 text-pharmacy-600" />,
+      icon: <Pill className="h-8 w-8 text-pharmacy-600" />,
       title: t('home.services.prescription.title'),
       description: t('home.services.prescription.description'),
       link: '/prescription'

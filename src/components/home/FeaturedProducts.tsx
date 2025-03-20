@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ChevronRight, ShoppingCart, PrescriptionBottle } from 'lucide-react';
+import { ChevronRight, ShoppingCart, Pill } from 'lucide-react';
 import { products } from '@/data/products';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -64,7 +64,7 @@ const FeaturedProducts = () => {
                 />
                 {product.requiresPrescription && (
                   <div className="absolute top-2 right-2 bg-yellow-100 text-yellow-800 px-2 py-1 rounded-md text-xs font-medium flex items-center">
-                    <PrescriptionBottle className="h-3 w-3 mr-1" />
+                    <Pill className="h-3 w-3 mr-1" />
                     Rx
                   </div>
                 )}
